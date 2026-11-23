@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Thangellamudi Bhumika's Data Analyst portfolio featuring SQL, MySQL, Excel, Python, Tableau, Power BI and projects.">
+<title>Thangellamudi Bhumika | Data Analyst Portfolio</title>
+<style>
+:root{--bg:#0b1220;--panel:#121e31;--text:#eef5ff;--muted:#a9bad0;--mint:#68e0c0;--blue:#8daeff;--line:rgba(255,255,255,.11)}
+*{box-sizing:border-box;margin:0;padding:0;scroll-behavior:smooth}
+body{font-family:Inter,Segoe UI,Arial,sans-serif;background:radial-gradient(circle at 85% 4%,#1a3550 0,transparent 31%),var(--bg);color:var(--text);line-height:1.65}
+a{color:inherit;text-decoration:none}.wrap{width:min(1080px,90%);margin:auto}
+header{position:sticky;top:0;z-index:10;background:rgba(11,18,32,.9);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+nav{height:70px;display:flex;align-items:center;justify-content:space-between}.brand{font-weight:850;letter-spacing:.1em}.brand span{color:var(--mint)}
+.links{display:flex;gap:23px;color:var(--muted);font-size:.93rem}.links a:hover{color:var(--mint)}
+.menu{display:none;background:none;border:1px solid var(--line);color:var(--text);padding:7px 11px;border-radius:9px}
+section{padding:76px 0}.hero{min-height:570px;display:grid;grid-template-columns:1.25fr .75fr;align-items:center;gap:38px;padding-top:65px}
+.eyebrow{color:var(--mint);font-size:.8rem;letter-spacing:.17em;text-transform:uppercase;font-weight:750}
+h1{font-size:clamp(2.8rem,6vw,5rem);line-height:1.08;margin:17px 0}.gradient{background:linear-gradient(90deg,var(--mint),var(--blue));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{color:var(--muted);font-size:1.08rem;max-width:650px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:11px 18px;border:1px solid var(--line);border-radius:11px;font-weight:700;transition:.2s}.primary{background:var(--mint);color:#07151a;border-color:var(--mint)}.btn:hover{transform:translateY(-2px)}
+.panel,.card,.skill{background:linear-gradient(145deg,rgba(23,38,60,.96),rgba(18,30,49,.96));border:1px solid var(--line);border-radius:19px}
+.profile{padding:27px}.initials{width:72px;height:72px;border-radius:20px;display:grid;place-items:center;background:linear-gradient(135deg,var(--mint),var(--blue));color:#07151a;font-size:1.55rem;font-weight:900;margin-bottom:18px}
+.profile h2{font-size:1.35rem}.muted{color:var(--muted)}.quick{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:20px}.quick div{background:#ffffff09;padding:12px;border-radius:11px}.quick b{display:block;color:var(--mint);font-size:.77rem}.quick span{font-size:.87rem;color:var(--muted)}
+.head{margin-bottom:28px}.head h2{font-size:clamp(2rem,4vw,2.65rem);margin:6px 0}.head p{color:var(--muted);max-width:740px}
+.about-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:16px}.card{padding:24px}.card p{color:var(--muted)}.education .meta{color:var(--mint);margin:8px 0;font-size:.92rem}
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.skill{padding:21px}.skill .ico{font-size:1.45rem}.skill h3{font-size:1.05rem;margin:8px 0 12px}.tags{display:flex;flex-wrap:wrap;gap:7px}.tag{font-size:.83rem;padding:5px 9px;border-radius:999px;background:#8daeff18;border:1px solid #8daeff2a;color:#e1eaff}
+.projects{display:grid;grid-template-columns:repeat(2,1fr);gap:17px}
+.project-card{position:relative;min-height:255px;overflow:hidden;padding:0;isolation:isolate;transition:transform .28s,border-color .28s,box-shadow .28s}
+.project-card:hover,.project-card:focus-within{transform:translateY(-7px);border-color:rgba(104,224,192,.65);box-shadow:0 22px 48px rgba(0,0,0,.32)}
+.project-content{padding:25px;transition:transform .28s,opacity .28s}.project-card:hover .project-content,.project-card:focus-within .project-content{transform:translateY(-7px)}
+.project .num{font-size:.78rem;letter-spacing:.13em;color:var(--mint)}.project h3{margin:8px 0}.project p{color:var(--muted);margin-bottom:14px}.project .tags{margin-top:13px}
+.project-overlay{position:absolute;inset:auto 0 0 0;padding:17px 24px 20px;background:linear-gradient(180deg,transparent,rgba(6,13,24,.97) 25%);transform:translateY(105%);opacity:0;transition:transform .28s,opacity .28s;z-index:2}
+.project-card:hover .project-overlay,.project-card:focus-within .project-overlay{transform:translateY(0);opacity:1}
+.project-overlay a{display:inline-flex;align-items:center;margin:5px 12px 0 0;padding:8px 12px;border-radius:9px;background:var(--mint);color:#07151a;font-size:.85rem;font-weight:800}
+.project-overlay .secondary-link{background:#ffffff12;color:var(--text);border:1px solid var(--line)}
+.project-overlay small{display:block;color:#c1cee1;margin-bottom:5px}
+.project-card:focus-within .project-overlay{position:relative;transform:none}
+.secondary-title{margin:34px 0 17px;font-size:1.3rem}.secondary{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.secondary .card{padding:19px}.secondary h3{font-size:1rem;margin-bottom:6px}
+.contact{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}.contact p{color:var(--muted);margin-top:6px}
+footer{border-top:1px solid var(--line);padding:23px 0;color:var(--muted);font-size:.87rem}.foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.socials{display:flex;gap:10px;flex-wrap:wrap;margin-top:17px}.socials a{border:1px solid var(--line);padding:9px 13px;border-radius:10px;color:var(--mint);font-weight:700}.socials a:hover{background:#68e0c018}
+@media(max-width:800px){.hero{grid-template-columns:1fr;padding-top:45px}.about-grid{grid-template-columns:1fr}.skills{grid-template-columns:repeat(2,1fr)}.secondary{grid-template-columns:1fr}}
+@media(max-width:600px){.links{display:none;position:absolute;top:70px;left:0;right:0;background:#101b2d;padding:18px 5%;flex-direction:column}.links.show{display:flex}.menu{display:block}.skills,.projects{grid-template-columns:1fr}section{padding:58px 0}.hero{min-height:auto}.project-overlay{position:relative;transform:none;opacity:1;background:rgba(6,13,24,.45)}.project-card{min-height:0}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+<header><nav class="wrap">
+<a class="brand" href="#home">BHUMIKA<span>.</span></a>
+<button class="menu" onclick="document.querySelector('.links').classList.toggle('show')" aria-label="Toggle navigation">Menu</button>
+<div class="links"><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#education">Education</a><a href="#contact">Contact</a></div>
+</nav></header>
+<main>
+<section class="wrap hero" id="home">
+<div>
+<div class="eyebrow">Aspiring Data Analyst · Computer Science Graduate</div>
+<h1>Turning data into<br><span class="gradient">clear insights.</span></h1>
+<p class="lead">Hi, I'm Thangellamudi Bhumika. I enjoy working with data, writing SQL queries, organizing information in Excel and learning data visualization tools. I’m looking for an entry-level opportunity where I can apply my analytical thinking, problem-solving skills and willingness to learn.</p>
+<div class="actions"><a class="btn primary" href="#projects">Explore my projects ↗</a><a class="btn" href="https://github.com/thangellamudibhumika" target="_blank" rel="noopener">GitHub profile ↗</a></div>
+<div class="socials"><a href="https://github.com/thangellamudibhumika" target="_blank" rel="noopener">GitHub</a><a href="https://linkedin.com/in/thangellamudi-bhumika-b4422428b" target="_blank" rel="noopener">LinkedIn</a></div>
+</div>
+<aside class="panel profile"><div class="initials">TB</div><h2>Thangellamudi Bhumika</h2><p class="muted">SQL · Excel · Python · Data Analysis</p>
+<div class="quick"><div><b>DATABASE</b><span>SQL · MySQL</span></div><div><b>SPREADSHEETS</b><span>Microsoft Excel</span></div><div><b>PROGRAMMING</b><span>Python</span></div><div><b>VISUALIZATION</b><span>Tableau · Power BI</span></div></div>
+</aside>
+</section>
+<section class="wrap" id="about">
+<div class="head"><div class="eyebrow">About me</div><h2>Analytical mindset. Hands-on learner.</h2><p>I’m a Computer Science graduate with a strong interest in data analysis and database operations. I have practised SQL and MySQL, worked with Excel features for data organization and reporting, and am building my knowledge of Tableau and Power BI. I enjoy exploring datasets, identifying issues and presenting information clearly.</p></div>
+<div class="about-grid"><div class="card"><h3>What I’m interested in</h3><p>Data cleaning, data validation, SQL querying, reporting, dashboard development and turning raw information into useful insights. I’m also interested in business and software implementation roles where accuracy, analysis and communication matter.</p></div>
+<div class="card education" id="education"><div class="eyebrow">Education</div><h3>B.Tech — Computer Science & Engineering</h3><p>DVR & Dr. HS MIC College of Technology</p><div class="meta">2022–2026 · CGPA: 8.67</div><p>Kanchikacherla, Andhra Pradesh</p></div></div>
+</section>
+<section class="wrap" id="skills"><div class="head"><div class="eyebrow">Technical toolkit</div><h2>Skills</h2><p>My current skills and learning areas, grouped by how I use them in data work.</p></div>
+<div class="skills">
+<article class="skill"><div class="ico">🗄️</div><h3>Database & SQL</h3><div class="tags"><span class="tag">SQL</span><span class="tag">MySQL</span><span class="tag">SELECT & Filtering</span><span class="tag">Joins</span><span class="tag">Aggregations</span><span class="tag">Subqueries</span><span class="tag">CTEs</span><span class="tag">Window Functions</span><span class="tag">MySQL Workbench</span></div></article>
+<article class="skill"><div class="ico">📊</div><h3>Microsoft Excel</h3><div class="tags"><span class="tag">Formulas & Functions</span><span class="tag">IF & Logical Functions</span><span class="tag">Lookup Functions</span><span class="tag">Pivot Tables</span><span class="tag">Charts</span><span class="tag">Data Validation</span><span class="tag">Data Cleaning</span></div></article>
+<article class="skill"><div class="ico">🐍</div><h3>Programming</h3><div class="tags"><span class="tag">Python</span><span class="tag">Fundamentals</span><span class="tag">Basic Problem Solving</span></div></article>
+<article class="skill"><div class="ico">📈</div><h3>Data Visualization</h3><div class="tags"><span class="tag">Tableau — Fundamentals</span><span class="tag">Power BI — Fundamentals / Learning</span><span class="tag">Charts & Reporting</span></div></article>
+<article class="skill"><div class="ico">🧰</div><h3>Tools</h3><div class="tags"><span class="tag">MySQL Workbench</span><span class="tag">GitHub</span><span class="tag">VS Code</span><span class="tag">Microsoft Office</span><span class="tag">PowerPoint</span></div></article>
+<article class="skill"><div class="ico">🌐</div><h3>Additional Technical Skills</h3><div class="tags"><span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JavaScript</span><span class="tag">PHP</span><span class="tag">REST API Concepts</span></div></article>
+</div></section>
+<section class="wrap" id="projects"><div class="head"><div class="eyebrow">Selected work</div><h2>Projects</h2><p>Hover over a project card (or tap its links on mobile) to open the live demo or source code where available.</p></div>
+<div class="projects">
+<article class="card project-card"><div class="project-content"><div class="num">DATA PROJECT 01</div><h3>Customer Data Cleaning & Validation System</h3><p>Used SQL to inspect customer records, identify data-quality issues and practise cleaning and validation steps to improve consistency and reliability.</p><div class="tags"><span class="tag">SQL</span><span class="tag">MySQL</span><span class="tag">Data Cleaning</span><span class="tag">Data Validation</span></div></div><div class="project-overlay"><small>Project repository link not yet shared</small><a class="secondary-link" href="https://github.com/thangellamudibhumika" target="_blank" rel="noopener">Visit GitHub profile ↗</a></div></article>
+<article class="card project-card"><div class="project-content"><div class="num">ACADEMIC MAJOR PROJECT</div><h3>College Bus Management System</h3><p>Academic project for college bus tracking and route management, including live location, ETA, route administration and driver-safety monitoring features.</p><div class="tags"><span class="tag">MySQL</span><span class="tag">PHP</span><span class="tag">HTML/CSS/JS</span><span class="tag">Google Maps API</span></div></div><div class="project-overlay"><small>Project repository link not yet shared</small><a class="secondary-link" href="https://github.com/thangellamudibhumika" target="_blank" rel="noopener">Visit GitHub profile ↗</a></div></article>
+<article class="card project-card"><div class="project-content"><div class="num">WEB PROJECT 03</div><h3>Employee Management System (EMS)</h3><p>Web application project for organizing employee-related information and practising a structured business application.</p><div class="tags"><span class="tag">Web Development</span><span class="tag">JavaScript</span></div></div><div class="project-overlay"><small>Open source code or live project</small><a href="https://github.com/tangellamudibhumika-boop/EMS_Project" target="_blank" rel="noopener">GitHub repository ↗</a><a class="secondary-link" href="https://tangellamudibhumika-boop.github.io/EMS_Project/" target="_blank" rel="noopener">Live demo ↗</a></div></article>
+<article class="card project-card"><div class="project-content"><div class="num">WEB PROJECT 04</div><h3>E-commerce Website</h3><p>Frontend shopping website practising product presentation, page layout and JavaScript interactions.</p><div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span></div></div><div class="project-overlay"><small>Open source code or live project</small><a href="https://github.com/thangellamudibhumika/Ecommerce_website" target="_blank" rel="noopener">GitHub repository ↗</a><a class="secondary-link" href="https://tangellamudibhumika-boop.github.io/Ecomerce_website/" target="_blank" rel="noopener">Live demo ↗</a></div></article>
+<article class="card project-card"><div class="project-content"><div class="num">WEB PROJECT 05</div><h3>Cloud Calculator</h3><p>Interactive calculator web project demonstrating frontend interface development and JavaScript functionality.</p><div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span></div></div><div class="project-overlay"><small>Open source code or live project</small><a href="https://github.com/thangellamudibhumika/cloud_calculator" target="_blank" rel="noopener">GitHub repository ↗</a><a class="secondary-link" href="https://cloud-calculator-xi.vercel.app/" target="_blank" rel="noopener">Live demo ↗</a></div></article>
+<article class="card project-card"><div class="project-content"><div class="num">WEB PROJECT 06</div><h3>Cartoon World</h3><p>Creative cartoon-themed web project showcasing frontend layout, styling and visual design practice.</p><div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span></div></div><div class="project-overlay"><small>Open source code</small><a href="https://github.com/thangellamudibhumika/cartoon-world" target="_blank" rel="noopener">GitHub repository ↗</a></div></article>
+<article class="card project-card"><div class="project-content"><div class="num">AUTOMATION PROJECT 07</div><h3>Student Form Email Automation</h3><p>n8n workflow practice that sends an email after a student form submission, demonstrating an automated follow-up process.</p><div class="tags"><span class="tag">n8n</span><span class="tag">Workflow Automation</span><span class="tag">Email</span></div></div><div class="project-overlay"><small>Workflow repository link not yet shared</small><a class="secondary-link" href="https://github.com/thangellamudibhumika" target="_blank" rel="noopener">Visit GitHub profile ↗</a></div></article>
+</div></section>
+<section class="wrap" id="contact"><div class="card contact"><div><div class="eyebrow">Contact</div><h2>Let’s connect.</h2><p>Interested in entry-level opportunities in Data Analysis, MIS, SQL, Data Operations and reporting.</p></div>
+<div class="actions"><a class="btn primary" href="https://linkedin.com/in/thangellamudi-bhumika-b4422428b" target="_blank" rel="noopener">LinkedIn ↗</a><a class="btn" href="https://github.com/thangellamudibhumika" target="_blank" rel="noopener">GitHub ↗</a><a class="btn" href="https://thangellamudibhumika.github.io/Bhumika-portfolio/" target="_blank" rel="noopener">Portfolio ↗</a></div></div></section>
+</main>
+<footer><div class="wrap foot"><span>© 2026 Thangellamudi Bhumika</span><span>Data Analyst Portfolio</span></div></footer>
+</body></html>
